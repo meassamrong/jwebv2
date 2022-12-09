@@ -22,11 +22,22 @@
         </div>
       </div>
     </div>
+    <div class="main-2">
+      <div class="project-section">
+        <div class="project-sec-title">
+          <h2><b>PROJECT Explain</b></h2>
+        </div>
+        <div class="project">
+          <div class="project-name">
+            <h3>WEBDEVELOPMENT <i class="bi bi-code-slash"></i></h3>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-
 @font-face {
   font-family: Koulen;
   src: url('../../public/fonts/Koulen-Regular.ttf');
@@ -47,7 +58,7 @@
 .content-headers img{
   height: 500px;
   width: auto;
-  animation: contentMedia alternate 8s linear infinite;
+  animation: contentMedia alternate 8s ease-out infinite;
 }
 @keyframes contentMedia {
   0%{
@@ -61,27 +72,75 @@
   }
 }
 .shadow {
-  filter: blur(30px);
+  filter: blur(40px);
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.267);
-  box-shadow: 2px 2px 2px 2px black;
+  background-color: rgba(0, 0, 0, 0.548);
+  box-shadow: 2px 2px 2px black;
   position: absolute;
-  transform:rotateX(51deg) rotateZ(43deg) translate(90% -50%);
+  left: 50%;
+  transform:rotateX(51deg) rotateZ(43deg) translate(-50%);
   transform-style: preserve-3d;
+  animation-name: shadowheaser-Animation; 
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+
   
-
-
 }
-/* .main-header {
-  background-image: url('../assets/3274387.jpg');
-  height: 500px;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 5px;
-  transform: ;
-} */
+@keyframes shadowheaser-Animation {
+    0%{
+      height: 100px;
+       width: 100px;
+    }
+    50%{
+      height: 200px;
+      width: 200px;
+    }
+    100%{
+      height: 100px;
+      width: 100px;
+    }
+}
+.main-2 {
+  margin-top: 130px;
+  border-top: solid 1px rgba(128, 128, 128, 0.425);
+}
+.project-sec-title h2{
+  font-family: Koulen;
+}
+.project-name {
+  text-decoration: underline;
+  color: rgb(24, 24, 24);
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 450px) { 
+.content-headers img {
+    height: 290px;
+}
+.shadow {
+  height: 80px;
+  width: 80px;
+  animation-name: shadowheaser-Animation-re; 
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
+@keyframes shadowheaser-Animation-re {
+    0%{
+      height: 80px;
+      width: 80px;
+    }
+    50%{
+      height: 120px;
+      width: 120px;
+    }
+    100%{
+      height: 80px;
+      width: 80px;
+    }
+}
+}
 </style>
+
