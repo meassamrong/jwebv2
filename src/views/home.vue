@@ -40,11 +40,11 @@
 <style scoped>
 @font-face {
   font-family: Koulen;
-  src: url('../../public/fonts/Koulen-Regular.ttf');
+  src: url('../src/fonts/Koulen-Regular.ttf');
 }
 @font-face {
   font-family: Ubuntu;
-  src: url('../../public/fonts/Ubuntu-Regular.ttf');
+  src: url('../src/fonts/Ubuntu-Regular.ttf');
 }
 .main-header {
   font-family: Koulen;
@@ -114,8 +114,14 @@
   text-decoration: underline;
   color: rgb(24, 24, 24);
 }
+
+
+
 /* // Small devices (landscape phones, 576px and up) */
-@media (max-width: 450px) { 
+@media only screen and (max-width: 768px) { 
+.main-header{
+    margin-top: 120px;
+  }
 .content-headers img {
     height: 290px;
 }

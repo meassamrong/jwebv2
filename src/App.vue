@@ -4,26 +4,40 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
- <!-- <header>
+  <div class="contentm-headerm mobile">
+    <div class="navbar">
+      <div class="row col-12">
+        <div class="logo col-6">
+          <img src="../src/assets/j-logo.png" alt="">
+        </div>
+        <div class="nav-menu col-6">
+          <ul class="list-group list-group-horizontal">
+            <li><RouterLink to="/"><i class="bi bi-search"></i></RouterLink></li>
+            <li><RouterLink to="/"><i class="bi bi-person-circle"></i></RouterLink></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row col-12">
+        <div class="menuM-group">
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group list-group-horizontal"><RouterLink to="/"><i class="bi bi-house"></i></RouterLink></li>
+            <li class="list-group list-group-horizontal"><RouterLink to="/"><i class="bi bi-newspaper"></i></RouterLink></li>
+            <li class="list-group list-group-horizontal"><RouterLink to="/"><i class="bi bi-code-square"></i></RouterLink></li>
+            <li class="list-group list-group-horizontal"><RouterLink to="/"><i class="bi bi-info-circle"></i></RouterLink></li>
+            <li class="list-group list-group-horizontal"><RouterLink to="/"><i class="bi bi-currency-dollar"></i></RouterLink></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/login">Login</RouterLink>
-      </nav>
-    </div> 
-    
-  </header> -->
-  <div class="content-header">
+  </div>
+  <div class="content-header desktop">
         <div class="container">
             <div class="row">
                 <div class="logo col-4">
-                  <RouterLink to="/"><img src="../src/assets/j-logo.png" alt=""></RouterLink>    
+                  <RouterLink to="/"><img src="../src/assets/j-logo.png" alt=""></RouterLink>
                 </div>
-                <div class="menu col-8 text">
+                <div class="menu col-8">
                     <ul class="list-group list-group-horizontal">
                         <li class="list-group list-group-horizontal"><RouterLink to="/">Home</RouterLink></li>
                         <li class="list-group list-group-horizontal"><RouterLink to="/">Blog</RouterLink></li>
@@ -33,6 +47,7 @@ import HelloWorld from "./components/HelloWorld.vue";
                     </ul>
                 </div>
             </div>
+           
         </div>
     </div>
   <RouterView />
@@ -41,7 +56,10 @@ import HelloWorld from "./components/HelloWorld.vue";
 <style scoped>
 @font-face {
   font-family:AnekDevanagari ;
-  src: url('../public/fonts/AnekDevanagari-VariableFont_wdth\,wght.ttf');
+  src: url('../src/fonts/AnekDevanagari-VariableFont_wdth\,wght.ttf');
+}
+.mobile {
+  display: none;
 }
   .content-header {
     background-color: rgb(243, 243, 243);
@@ -60,16 +78,16 @@ import HelloWorld from "./components/HelloWorld.vue";
     font-size: 0px;
     float: right;
   }
-  
   .menu ul li{
     text-align: center;
+    display: inline-block;
+    padding-top: 10px;
   }
   .menu ul li a{
     color: rgb(24, 24, 24);
     text-decoration: none;
     font-size: 25px;
-    padding: 10px 10px;
-    padding-top: 15px !important;
+    padding: 0px 10px;
     transition: all 300ms !important;
     text-align: center;
     border-bottom: solid 1px rgba(6, 124, 187, 0);
